@@ -50,7 +50,7 @@ function Register() {
       </form>
       <div className="flex justify-center items-center">
         <p className="mr-2">Have an account? </p>
-        <Link to="/" className="font-bold text-blue-500">Click here...</Link>
+        <Link to="/login" className="font-bold text-blue-500">Click here...</Link>
       </div>
     </div>
   );

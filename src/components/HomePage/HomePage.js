@@ -5,7 +5,7 @@ function HomePage() {
 
   return (
     <div>
-      {!userLocal && <Navigate to="/" replace={true} />}
+      {!userLocal && <Navigate to="/login" replace={true} />}
       <div>HomePage</div>
     </div>
   );

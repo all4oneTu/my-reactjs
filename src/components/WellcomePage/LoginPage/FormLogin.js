@@ -7,6 +7,7 @@ function FormLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
+  const userLocal = localStorage.getItem("user");
   const handleLogin = async(e) => {
     e.preventDefault();
     console.log("start login ....");
@@ -26,7 +27,8 @@ function FormLogin() {
   return (
     <div className="mx-auto my-7 max-w-5xl border-gray-500 rounded-md">
       <h3 className="text-red-500 text-center">Login</h3>
-      {user && <Navigate to="/home" replace={true} />}
+      {user && <Navigate to="/" replace={true} />}
+      {userLocal && <Navigate to="/" replace={true} />}
       {/* form login  */}
       <form onSubmit={handleLogin} className="flex flex-col items-center ">
         <input
@@ -48,7 +50,7 @@ function FormLogin() {
       </form>
       <div className="flex justify-center items-center">
         <p className="mr-2">Dont have an account? </p>
-        <Link to="register" className="font-bold text-blue-500">
+        <Link to="/register" className="font-bold text-blue-500">
           Click here...
         </Link>
       </div>
